@@ -128,6 +128,7 @@ public class BookingActivity extends AppCompatActivity {
      *      logged in -> open user profile/dashboard
      */
     public void openProfile(View view) {
-        Toast.makeText(this, "Need to complete", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(BookingActivity.this, CustomerProfileActivity.class);
+        startActivity(intent);
     }
 }

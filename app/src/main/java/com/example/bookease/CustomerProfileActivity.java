@@ -1,6 +1,8 @@
 package com.example.bookease;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class CustomerProfileActivity extends AppCompatActivity {
 
+    Button btn_editDetails;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +23,16 @@ public class CustomerProfileActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        btn_editDetails = findViewById(R.id.btn_editDetails);
+    }
+
+    /**
+     *
+     *
+     */
+    public void editDetails(View view) {
+        if (btn_editDetails.getText().equals("Edit Details")) {
+
+        }
     }
 }

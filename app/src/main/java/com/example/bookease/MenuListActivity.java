@@ -45,6 +45,7 @@ public class MenuListActivity extends AppCompatActivity {
      *      logged in -> open user profile/dashboard
      */
     public void openProfile(View view) {
-        Toast.makeText(this, "Need to complete", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MenuListActivity.this, CustomerProfileActivity.class);
+        startActivity(intent);
     }
 }

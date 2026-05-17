@@ -44,12 +44,9 @@ public class MainActivity extends AppCompatActivity {
      *  else -> open login
      */
     public void openProfile(View view) {
-        //  Intent intent = new Intent();
-        //  intent.setClass(... profile || login );
-        //  startActivity(...);
-
-        // Temp Toast
-        Toast.makeText(this, "No profile yet", Toast.LENGTH_SHORT).show();
+        // IDK gotta logic to check if user is logged in
+        Intent intent = new Intent(MainActivity.this, CustomerProfileActivity.class);
+        startActivity(intent);
     }
 
     /**
