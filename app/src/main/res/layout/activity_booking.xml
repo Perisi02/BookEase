@@ -100,17 +100,16 @@
                 android:text="Guests:"
                 android:textAlignment="textEnd" />
 
-            <TextView
-                android:id="@+id/tv_selectGuests"
-                style="?spinnerStyle"
+            <EditText
+                android:id="@+id/et_selectGuests"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="?attr/editTextBackground"
                 android:hint="Guests"
                 android:paddingTop="10dp"
                 android:paddingEnd="10dp"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <LinearLayout
@@ -125,16 +124,23 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Time::"
+                android:text="Time:"
                 android:textAlignment="textEnd" />
 
-            <TextView
+            <EditText
                 android:id="@+id/tv_time"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Select Time" />
+                android:hint="Select Time"
+                android:inputType="time"/>
         </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Now"
+            android:layout_margin="30dp" />
 
     </LinearLayout>
     <!-- footer -->
