@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="6dp">
+
+        <!-- IDK what menu options there should be for this -->
+        <ImageView
+            android:id="@+id/iv_hamburgerMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/outline_dehaze_24"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="doSomething" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/outline_account_circle_24"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="openProfile" />
+
+    </LinearLayout>
+
+    <!-- Body -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:scaleType="fitCenter"
+            android:src="@drawable/outline_imagesmode_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_viewMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Menu"
+            android:gravity="center"
+            android:layout_margin="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="openFullMenu"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Advertisement?? -->
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/gray"
+                android:scaleType="centerCrop"
+                android:src="@drawable/outline_imagesmode_24"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/gray"
+                android:scaleType="centerCrop"
+                android:src="@drawable/outline_imagesmode_24"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_bookNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Now"
+            android:layout_margin="50dp"
+            android:onClick="openBookingScreen"/>
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Footer"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

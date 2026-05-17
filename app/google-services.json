@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1063241903505",
+    "firebase_url": "https://bookease-v1-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bookease-v1",
+    "storage_bucket": "bookease-v1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063241903505:android:7c28a0aa49fcca49eefe30",
+        "android_client_info": {
+          "package_name": "com.example.bookease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0-nDb6Gba-L0thv2MEJb8Q7lv4-Ozpoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
