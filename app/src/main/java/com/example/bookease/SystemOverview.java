@@ -1,6 +1,7 @@
 package com.example.bookease;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,26 @@ public class SystemOverview extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    /**
+     * Nothing yet for the three buttons.
+     *
+     */
+    public void startManageBooking(View view) {
+    }
+
+    /**
+     *
+     *
+     */
+    public void startManageMenu(View view) {
+    }
+
+    /**
+     *
+     *
+     */
+    public void startManageStaff(View view) {
     }
 }
