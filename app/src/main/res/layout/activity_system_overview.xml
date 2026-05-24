@@ -1,10 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SystemOverview">
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:orientation="vertical"
+    tools:context=".SystemOverview"
+    android:gravity="center" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="System Overview" 
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Summary of System Data"
+        android:gravity="center"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+    
+    <!-- Total users -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="150dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+            android:text="Total Users: "/>
+
+        <TextView
+            android:id="@+id/tv_totalUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Total users"/>
+    </LinearLayout>
+
+    <!-- Total customers -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+            android:text="Customers: "/>
+
+        <TextView
+            android:id="@+id/tv_totalCustomers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Total customers"/>
+    </LinearLayout>
+
+    <!-- Total staff-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+            android:text="Staff: "/>
+
+        <TextView
+            android:id="@+id/tv_totalStaff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Total staff"/>
+    </LinearLayout>
+
+    <!-- Total admins-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+            android:text="Admin: "/>
+
+        <TextView
+            android:id="@+id/tv_totalAdmins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Total admin"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+    
+    <!-- Total bookings-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+            android:text="Total Bookings: "/>
+
+        <TextView
+            android:id="@+id/tv_totalBookings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Total bookings"/>
+    </LinearLayout>
+
+    <!-- Pending bookings-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+
+            android:text="Pending Bookings: "/>
+
+        <TextView
+            android:id="@+id/tv_totalPending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Total pending"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <!-- Menu items-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+            android:text="Menu Item: "/>
+
+        <TextView
+            android:id="@+id/tv_totalMenuItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Total menu items"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <!-- Management buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_manageBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage Bookings"
+            android:onClick="startManageBooking"/>
+
+        <Button
+            android:id="@+id/btn_manageMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage Menu"
+            android:onClick="startManageMenu"/>
+
+        <Button
+            android:id="@+id/btn_manageStaff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage Staff"
+            android:onClick="startManageStaff"/>
+    </LinearLayout>
+
+</LinearLayout>
