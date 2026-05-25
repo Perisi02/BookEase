@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StaffManagement">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Staff Management" />
+    </LinearLayout>
+
+    <!-- staff recycler-->
+    <!-- nah this aint it chief
+         probs best to move this or the text fields
+         into it's own activity -->
+    <!-- Gon try dynamic sum sum iykyk type shit-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_staffList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"/>
+
+    <!-- Text fields-->
+    <LinearLayout
+        android:id="@+id/ll_textFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!-- ID -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Staff ID: "
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/tv_staffID"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/editTextBackground"
+                android:hint="ID#" />
+        </LinearLayout>
+        <!-- fName -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="First Name: "
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/et_firstName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="First name"
+                android:text="" />
+        </LinearLayout>
+        <!-- lName -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Last Name: "
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/et_lastName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Last name"
+                android:text="" />
+        </LinearLayout>
+        <!-- role -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Role: "
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/et_role"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Select role"
+                android:text="" />
+        </LinearLayout>
+        <!-- email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Email: "
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Email"
+                android:text="" />
+        </LinearLayout>
+        <!-- phone -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Phone: "
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/et_phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Phone number"
+                android:text="" />
+        </LinearLayout>
+        <!-- cancel/ok buttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:onClick="cancelEdit"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_confirmEdit"
+                android:text="Confirm"
+                android:onClick="confirmEdit"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Button fields -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_addNewStaff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addNewStaff"
+            android:text="Register New Staff" />
+
+        <Button
+            android:id="@+id/btn_updateDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="updateDetails"
+            android:text="Update Staff Details" />
+
+        <Button
+            android:id="@+id/btn_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deleteStaff"
+            android:text="Delete Staff Account" />
+    </LinearLayout>
+
+</LinearLayout>
