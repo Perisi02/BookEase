@@ -1,6 +1,7 @@
 package com.example.bookease;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,40 @@ public class StaffManagement extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    /**
+     *
+     *
+     */
+    public void cancelEdit(View view) {
+    }
+
+    /**
+     *
+     *
+     */
+    public void confirmEdit(View view) {
+    }
+
+    /**
+     *
+     *
+     */
+    public void addNewStaff(View view) {
+    }
+
+    /**
+     *
+     *
+     */
+    public void updateDetails(View view) {
+    }
+
+    /**
+     *
+     *
+     */
+    public void deleteStaff(View view) {
     }
 }
