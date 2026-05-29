@@ -14,10 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookEase">
         <activity
+            android:name=".Admin_Bookings"
+            android:exported="false" />
+        <activity
             android:name=".StaffManagement"
             android:exported="false" />
         <activity
-            android:name=".SystemOverview"
+            android:name=".Admin_Dashboard"
             android:exported="false" />
         <activity
             android:name=".CustomerProfileActivity"
