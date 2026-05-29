@@ -4,16 +4,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".SystemOverview"
-    android:gravity="center" >
+    tools:context=".SystemOverview">
 
     <!-- heading -->
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="System Overview" 
-        android:gravity="center"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="System Overview" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_logout"
+            android:onClick="logoutAdmin"
+            android:text="Logout"
+            android:layout_gravity="end"/>
+    </FrameLayout>
 
     <!-- metrics container ll_systemOverview-->
     <LinearLayout
@@ -30,35 +44,34 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Summary of System Data"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="Summary of System Data" />
 
         <!-- Decorative line break -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/black"
-            />
+            android:background="@color/black" />
 
         <!-- Total users -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="150dp"
-                android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
-                android:text="Total Users: "/>
+                android:text="Total Users: "
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:id="@+id/tv_totalUsers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:hint="Total users"/>
+                android:hint="Total users"
+                android:text="" />
         </LinearLayout>
 
         <!-- Total customers -->
@@ -70,16 +83,16 @@
 
             <TextView
                 android:layout_width="150dp"
-                android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
-                android:text="Customers: "/>
+                android:text="Customers: "
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:id="@+id/tv_totalCustomers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:hint="Total customers"/>
+                android:hint="Total customers"
+                android:text="" />
         </LinearLayout>
 
         <!-- Total staff-->
@@ -91,16 +104,16 @@
 
             <TextView
                 android:layout_width="150dp"
-                android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
-                android:text="Staff: "/>
+                android:text="Staff: "
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:id="@+id/tv_totalStaff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:hint="Total staff"/>
+                android:hint="Total staff"
+                android:text="" />
         </LinearLayout>
 
         <!-- Total admins-->
@@ -112,24 +125,23 @@
 
             <TextView
                 android:layout_width="150dp"
-                android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
-                android:text="Admin: "/>
+                android:text="Admin: "
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:id="@+id/tv_totalAdmins"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:hint="Total admin"/>
+                android:hint="Total admin"
+                android:text="" />
         </LinearLayout>
 
         <!-- Decorative line break -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/black"
-            />
+            android:background="@color/black" />
 
         <!-- Total bookings-->
         <LinearLayout
@@ -140,16 +152,16 @@
 
             <TextView
                 android:layout_width="150dp"
-                android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
-                android:text="Total Bookings: "/>
+                android:text="Total Bookings: "
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:id="@+id/tv_totalBookings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:hint="Total bookings"/>
+                android:hint="Total bookings"
+                android:text="" />
         </LinearLayout>
 
         <!-- Pending bookings-->
@@ -161,25 +173,24 @@
 
             <TextView
                 android:layout_width="150dp"
-                android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
+                android:text="Pending Bookings: "
 
-                android:text="Pending Bookings: "/>
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:id="@+id/tv_totalPending"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:hint="Total pending"/>
+                android:hint="Total pending"
+                android:text="" />
         </LinearLayout>
 
         <!-- Decorative line break -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/black"
-            />
+            android:background="@color/black" />
 
         <!-- Menu items-->
         <LinearLayout
@@ -190,24 +201,23 @@
 
             <TextView
                 android:layout_width="150dp"
-                android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
-                android:text="Menu Item: "/>
+                android:text="Menu Item: "
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:id="@+id/tv_totalMenuItems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:hint="Total menu items"/>
+                android:hint="Total menu items"
+                android:text="" />
         </LinearLayout>
 
         <!-- decorative line break -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/black"
-            />
+            android:background="@color/black" />
     </LinearLayout>
 
     <!-- Management buttons-->
@@ -216,32 +226,32 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <!-- manage booking -->
         <Button
             android:id="@+id/btn_manageBooking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Manage Bookings"
-            android:onClick="startManageBooking"/>
+            android:onClick="startManageBooking"
+            android:text="Manage Bookings" />
 
         <!-- manage menu items -->
         <Button
             android:id="@+id/btn_manageMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Manage Menu"
-            android:onClick="startManageMenu"/>
+            android:onClick="startManageMenu"
+            android:text="Manage Menu" />
 
         <!-- manage staff -->
         <Button
             android:id="@+id/btn_manageStaff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Manage Staff"
-            android:onClick="startManageStaff"/>
+            android:onClick="startManageStaff"
+            android:text="Manage Staff" />
     </LinearLayout>
 
 </LinearLayout>
