@@ -2,6 +2,7 @@ package com.example.bookease;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,10 +25,19 @@ public class SystemOverview extends AppCompatActivity {
     }
 
     /**
+     *
+     *
+     */
+    public void logoutAdmin(View view) {
+        Toast.makeText(this, "Clicked!\nLogout Admin", Toast.LENGTH_SHORT).show();
+    }
+
+    /**
      * Nothing yet for the three buttons.
      *
      */
     public void startManageBooking(View view) {
+        Toast.makeText(this, "Clicked!\nManage Booking", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -35,6 +45,7 @@ public class SystemOverview extends AppCompatActivity {
      *
      */
     public void startManageMenu(View view) {
+        Toast.makeText(this, "Clicked!\nManage Menu", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -42,5 +53,6 @@ public class SystemOverview extends AppCompatActivity {
      *
      */
     public void startManageStaff(View view) {
+        Toast.makeText(this, "Clicked!\nManage Staff", Toast.LENGTH_SHORT).show();
     }
 }
