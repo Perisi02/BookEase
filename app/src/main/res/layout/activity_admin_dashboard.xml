@@ -4,8 +4,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
+    android:padding="25dp"
     tools:context=".Admin_Dashboard">
 
     <!-- heading -->
@@ -18,6 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
             android:text="System Overview" />
 
         <Button
@@ -232,7 +234,7 @@
         <!-- manage booking -->
         <Button
             android:id="@+id/btn_manageBooking"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="startManageBooking"
             android:text="Manage Bookings" />
@@ -240,7 +242,7 @@
         <!-- manage menu items -->
         <Button
             android:id="@+id/btn_manageMenu"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="startManageMenu"
             android:text="Manage Menu" />
@@ -248,7 +250,7 @@
         <!-- manage staff -->
         <Button
             android:id="@+id/btn_manageStaff"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="startManageStaff"
             android:text="Manage Staff" />
