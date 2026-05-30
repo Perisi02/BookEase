@@ -78,29 +78,13 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <!-- manage booking -->
+        <!-- Add dummy booking data to Firebase db -->
         <Button
-            android:id="@+id/btn_manageBooking"
+            android:id="@+id/btn_addTestBooking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startManageBooking"
-            android:text="Manage Bookings" />
-
-        <!-- manage menu items -->
-        <Button
-            android:id="@+id/btn_manageMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="startManageMenu"
-            android:text="Manage Menu" />
-
-        <!-- manage staff -->
-        <Button
-            android:id="@+id/btn_manageStaff"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="startManageStaff"
-            android:text="Manage Staff" />
+            android:onClick="addTestBooking"
+            android:text="Add Test Booking" />
     </LinearLayout>
 
 </LinearLayout>
