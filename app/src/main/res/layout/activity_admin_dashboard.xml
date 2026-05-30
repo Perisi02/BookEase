@@ -234,7 +234,7 @@
         <!-- manage booking -->
         <Button
             android:id="@+id/btn_manageBooking"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startManageBooking"
             android:text="Manage Bookings" />
@@ -242,7 +242,7 @@
         <!-- manage menu items -->
         <Button
             android:id="@+id/btn_manageMenu"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startManageMenu"
             android:text="Manage Menu" />
@@ -250,7 +250,7 @@
         <!-- manage staff -->
         <Button
             android:id="@+id/btn_manageStaff"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startManageStaff"
             android:text="Manage Staff" />
