@@ -38,7 +38,7 @@ public class Admin_Dashboard extends AppCompatActivity {
      *
      */
     public void startManageBooking(View view) {
-        Intent intent = new Intent(Admin_Dashboard.this, Admin_Bookings.class);
+        Intent intent = new Intent(Admin_Dashboard.this, Admin_Booking_Main.class);
         startActivity(intent);
     }
 
