@@ -55,9 +55,6 @@ public class LoginActivity extends AppCompatActivity {
             - correct   -> continue
         3 - Go to user specific screen/dashboard
             - use user type for user dashboard
-        Intent intent = new Intent(LoginActivity.this, user_dashboard.class);
-        startActivity(intent);
-        finish()
     */
     public void loginUser(View view) {
         String email = et_email.getText().toString().trim();
