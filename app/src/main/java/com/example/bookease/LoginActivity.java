@@ -94,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 finish();
                             } else if (type.equalsIgnoreCase("staff")) {
-                                Intent intent = new Intent(LoginActivity.this, BookingActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, Admin_Dashboard.class);
                                 startActivity(intent);
                                 finish();
                             } else if (type.equalsIgnoreCase("admin")) {
