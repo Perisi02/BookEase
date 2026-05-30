@@ -1,8 +1,8 @@
 package com.example.bookease;
 
 public class Admin_Booking_Model {
-    private String id;
-    private String name;
+    private String bookingID;
+    private String customerName;
     private String date;
     private String time;
     private String guests;
@@ -11,29 +11,29 @@ public class Admin_Booking_Model {
     public Admin_Booking_Model() {
     }
 
-    public Admin_Booking_Model(String id, String name, String date, String time, String guests, String status) {
-        this.id = id;
-        this.name = name;
+    public Admin_Booking_Model(String bookingID, String customerName, String date, String time, String guests, String status) {
+        this.bookingID = bookingID;
+        this.customerName = customerName;
         this.date = date;
         this.time = time;
         this.guests = guests;
         this.status = status;
     }
 
-    public String getId() {
-        return id;
+    public String getBookingID() {
+        return bookingID;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setBookingID(String bookingID) {
+        this.bookingID = bookingID;
     }
 
-    public String getName() {
-        return name;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public String getDate() {
@@ -71,8 +71,8 @@ public class Admin_Booking_Model {
     @Override
     public String toString() {
         return "Admin_BookingModel{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                "booingID='" + bookingID + '\'' +
+                ", customerName='" + customerName + '\'' +
                 ", date='" + date + '\'' +
                 ", time='" + time + '\'' +
                 ", status='" + status + '\'' +

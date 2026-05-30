@@ -17,7 +17,7 @@ public class Admin_Booking_RVAdapter extends RecyclerView.Adapter<Admin_Booking_
     // List for all the bookings
     ArrayList<Admin_Booking_Model> bookingList;
 
-    // alt+insert -> generate constructor
+    // alt+insert -> generate constructor: takes in arraylist of objects/models
     public Admin_Booking_RVAdapter(ArrayList<Admin_Booking_Model> bookingList) {
         this.bookingList = bookingList;
     }
@@ -42,15 +42,15 @@ public class Admin_Booking_RVAdapter extends RecyclerView.Adapter<Admin_Booking_
         holder.btnConfirm.setVisibility(View.GONE);
 
         // Binding all the text fields
-        holder.resId.setText(booking.getId());
-        holder.name.setText(booking.getName());
+        holder.resId.setText(booking.getBookingID());
+        holder.name.setText(booking.getCustomerName());
         holder.date.setText(booking.getDate());
         holder.time.setText(booking.getTime());
         holder.guests.setText(booking.getGuests());
         holder.status.setText(booking.getStatus());
 
-        // Not 100% sure on the buttons but it is what it is I guess
-        // Just feels like it breaks the flow of the code, but TBH IDEK
+        // onClicks for the buttons
+        // clicking 'action' hides itself, but shows the buttons 'cancel' & 'confirm'
         holder.btnAction.setOnClickListener(v -> {
             holder.btnAction.setVisibility(View.GONE);
             holder.btnCancel.setVisibility(View.VISIBLE);
@@ -58,11 +58,11 @@ public class Admin_Booking_RVAdapter extends RecyclerView.Adapter<Admin_Booking_
         });
 
         holder.btnConfirm.setOnClickListener(v -> {
-            Toast.makeText(v.getContext(), "Confirm " + booking.getId(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), "Confirm " + booking.getBookingID(), Toast.LENGTH_SHORT).show();
         });
 
         holder.btnCancel.setOnClickListener(v -> {
-            Toast.makeText(v.getContext(), "Cancel " + booking.getId(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), "Cancel " + booking.getBookingID(), Toast.LENGTH_SHORT).show();
         });
     }
 

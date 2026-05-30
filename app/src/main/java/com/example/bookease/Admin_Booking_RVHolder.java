@@ -14,6 +14,7 @@ public class Admin_Booking_RVHolder extends RecyclerView.ViewHolder {
     TextView time;
     TextView guests;
     TextView status;
+
     Button btnAction;
     Button btnCancel;
     Button btnConfirm;
@@ -21,8 +22,8 @@ public class Admin_Booking_RVHolder extends RecyclerView.ViewHolder {
     public Admin_Booking_RVHolder(@NonNull View itemView) {
         super(itemView);
 
-        resId = itemView.findViewById(R.id.tv_resId);
-        name = itemView.findViewById(R.id.tv_name);
+        resId = itemView.findViewById(R.id.tv_bookingID);
+        name = itemView.findViewById(R.id.tv_customerName);
         date = itemView.findViewById(R.id.tv_date);
         time = itemView.findViewById(R.id.tv_time);
         guests = itemView.findViewById(R.id.tv_guests);

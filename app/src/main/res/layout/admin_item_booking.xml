@@ -26,13 +26,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Res#:"
+                android:text="Customer:"
                 android:textAlignment="textEnd" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name:"
+                android:text="BookingID:"
                 android:textAlignment="textEnd" />
 
             <TextView
@@ -67,21 +67,20 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:gravity=""
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_resId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Error getting Res#"
-                android:textAlignment="textStart" />
-
-            <TextView
-                android:id="@+id/tv_name"
+                android:id="@+id/tv_customerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Error getting name"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/tv_bookingID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Error getting Res#"
                 android:textAlignment="textStart" />
 
             <TextView
