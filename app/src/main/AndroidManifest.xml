@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookEase">
         <activity
-            android:name=".Admin_Bookings"
+            android:name=".Admin_Booking_Main"
             android:exported="false" />
         <activity
             android:name=".StaffManagement"
