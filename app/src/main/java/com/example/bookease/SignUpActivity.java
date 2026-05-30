@@ -9,10 +9,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -23,6 +36,8 @@ public class SignUpActivity extends AppCompatActivity {
     EditText et_password;
     Button btn_signUp;
     TextView btn_login;
+    FirebaseAuth auth;
+    DatabaseReference usersRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +57,8 @@ public class SignUpActivity extends AppCompatActivity {
         et_password = findViewById(R.id.et_password);
         btn_signUp = findViewById(R.id.btn_signUp);
         btn_login = findViewById(R.id.tv_login);
+        auth = FirebaseAuth.getInstance();
+        usersRef = FirebaseDatabase.getInstance().getReference("users");
     }
 
     /**
@@ -55,12 +72,50 @@ public class SignUpActivity extends AppCompatActivity {
         String lastName = et_lastName.getText().toString();
         String email = et_email.getText().toString();
         String password = et_password.getText().toString();
+        if (password.length() < 6) {
+            et_password.setError("Password must be at least 6 characters");
+            Toast.makeText(this, "Password must be at least 6 characters", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         // something something create new user type="customer"
 
-        // Tempt Toast
-        Toast.makeText(this, "Yet to complete", Toast.LENGTH_SHORT).show();
 
+        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    FirebaseUser currentUser = auth.getCurrentUser();
+                    if(currentUser == null){
+                        Toast.makeText(SignUpActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    String userId = currentUser.getUid();
+                    HashMap<String, Object> userMap = new HashMap<>();
+                    userMap.put("username", username);
+                    userMap.put("firstName", firstName);
+                    userMap.put("lastName", lastName);
+                    userMap.put("email", email);
+                    userMap.put("type", type);
+                    usersRef.child(userId).setValue(userMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(SignUpActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(SignUpActivity.this, "Failed to save data", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }else{
+                    Toast.makeText(SignUpActivity.this, "Sign up failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     /**
