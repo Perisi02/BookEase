@@ -111,6 +111,28 @@
                 android:hint="Last name"
                 android:text="" />
         </LinearLayout>
+        <!-- password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Password: "
+                android:textAlignment="textEnd"/>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:text="" />
+        </LinearLayout>
         <!-- role -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -177,58 +199,50 @@
                 android:hint="Phone number"
                 android:text="" />
         </LinearLayout>
-        <!-- cancel/ok buttons-->
+        <!-- buttons-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
-
             <Button
                 android:id="@+id/btn_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="cancelEdit"
-                android:text="Cancel" />
-
+                android:textSize="13sp"
+                android:text="Clear" />
             <Button
-                android:id="@+id/btn_confirmEdit"
+                android:id="@+id/btn_addNewStaff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="confirmEdit"
-                android:text="Confirm" />
+                android:onClick="addNewStaff"
+                android:textSize="13sp"
+                android:text="Add" />
+            <Button
+                android:id="@+id/btn_updateDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="updateDetails"
+                android:textSize="13sp"
+                android:text="Update" />
+            <Button
+                android:id="@+id/btn_deleteStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="deleteStaff"
+                android:textSize="13sp"
+                android:text="Delete" />
         </LinearLayout>
-    </LinearLayout>
-
-    <!-- Button fields -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:gravity="center"
-        android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_addNewStaff"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_return"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="addNewStaff"
-            android:text="Register New Staff" />
-
-        <Button
-            android:id="@+id/btn_updateDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="updateDetails"
-            android:text="Update Staff Details" />
-
-        <Button
-            android:id="@+id/btn_"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="deleteStaff"
-            android:text="Delete Staff Account" />
+            android:onClick="returnDashboard"
+            android:textSize="13sp"
+            android:text="Return"
+            tools:ignore="OnClick" />
     </LinearLayout>
 
 </LinearLayout>

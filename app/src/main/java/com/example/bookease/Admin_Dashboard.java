@@ -55,6 +55,7 @@ public class Admin_Dashboard extends AppCompatActivity {
      *
      */
     public void startManageStaff(View view) {
-        Toast.makeText(this, "Clicked!\nManage Staff", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(Admin_Dashboard.this, StaffManagement.class);
+        startActivity(intent);
     }
 }
