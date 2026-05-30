@@ -10,13 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Admin_Bookings extends AppCompatActivity {
+public class Admin_Booking_Main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_admin_bookings);
+        setContentView(R.layout.activity_admin_booking_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -25,7 +25,7 @@ public class Admin_Bookings extends AppCompatActivity {
     }
 
     public void goBack(View view) {
-        Intent intent = new Intent(Admin_Bookings.this, Admin_Dashboard.class);
+        Intent intent = new Intent(Admin_Booking_Main.this, Admin_Dashboard.class);
         startActivity(intent);
         finish();
     }
