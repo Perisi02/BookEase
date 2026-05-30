@@ -11,22 +11,25 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 // Extend to the .Adapter<RVHolder>
+// alt+insert to auto generate the x3 @Override methods
 public class Admin_Booking_RVAdapter extends RecyclerView.Adapter<Admin_Booking_RVHolder> {
 
     // List for all the bookings
     ArrayList<Admin_Booking_Model> bookingList;
 
-    // Ez constructor
+    // alt+insert -> generate constructor
     public Admin_Booking_RVAdapter(ArrayList<Admin_Booking_Model> bookingList) {
         this.bookingList = bookingList;
     }
 
-    // alt+insert to auto generate the x3 @Override methods
     @NonNull
     @Override
     public Admin_Booking_RVHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_item_booking, parent, false);
-        return new Admin_Booking_RVHolder(view);
+        return new Admin_Booking_RVHolder(
+                LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.admin_item_booking,
+                                parent,
+                                false));
     }
 
     @Override
@@ -47,7 +50,7 @@ public class Admin_Booking_RVAdapter extends RecyclerView.Adapter<Admin_Booking_
         holder.status.setText(booking.getStatus());
 
         // Not 100% sure on the buttons but it is what it is I guess
-        // I just feel like it breaks the flow of the code, but then again, I'm still a noob
+        // Just feels like it breaks the flow of the code, but TBH IDEK
         holder.btnAction.setOnClickListener(v -> {
             holder.btnAction.setVisibility(View.GONE);
             holder.btnCancel.setVisibility(View.VISIBLE);
@@ -66,5 +69,10 @@ public class Admin_Booking_RVAdapter extends RecyclerView.Adapter<Admin_Booking_
     @Override
     public int getItemCount() {
         return bookingList.size();
+    }
+
+    public void setData(ArrayList<Admin_Booking_Model> bookingList) {
+        this.bookingList = bookingList;
+        notifyDataSetChanged();
     }
 }
