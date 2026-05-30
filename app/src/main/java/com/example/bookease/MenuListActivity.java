@@ -3,7 +3,6 @@ package com.example.bookease;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,10 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
+import com.example.bookease.customer.Customer_Dashboard;
 
 public class MenuListActivity extends AppCompatActivity {
 
@@ -45,7 +41,7 @@ public class MenuListActivity extends AppCompatActivity {
      *      logged in -> open user profile/dashboard
      */
     public void openProfile(View view) {
-        Intent intent = new Intent(MenuListActivity.this, CustomerProfileActivity.class);
+        Intent intent = new Intent(MenuListActivity.this, Customer_Dashboard.class);
         startActivity(intent);
     }
 }

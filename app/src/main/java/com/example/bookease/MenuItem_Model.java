@@ -2,16 +2,16 @@ package com.example.bookease;
 
 import androidx.annotation.NonNull;
 
-public class MenuItem {
+public class MenuItem_Model {
     private String imageUrl;
     private String name;
     private double price;
     private String description;
 
-    public MenuItem() {
+    public MenuItem_Model() {
     }
 
-    public MenuItem(String imageUrl, String name, double price, String description) {
+    public MenuItem_Model(String imageUrl, String name, double price, String description) {
         this.imageUrl = imageUrl;
         this.name = name;
         this.price = price;

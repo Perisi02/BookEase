@@ -1,4 +1,4 @@
-package com.example.bookease;
+package com.example.bookease.admin;
 
 import android.view.View;
 import android.widget.Button;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.bookease.R;
 
 public class Admin_Booking_RVHolder extends RecyclerView.ViewHolder {
     TextView resId;

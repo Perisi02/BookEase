@@ -14,16 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookEase">
         <activity
-            android:name=".Admin_Booking_Main"
+            android:name=".admin.Admin_Booking_Main"
             android:exported="false" />
         <activity
             android:name=".StaffManagement"
             android:exported="false" />
         <activity
-            android:name=".Admin_Dashboard"
+            android:name=".admin.Admin_Dashboard"
             android:exported="false" />
         <activity
-            android:name=".CustomerProfileActivity"
+            android:name=".customer.Customer_Dashboard"
             android:exported="false" />
         <activity
             android:name=".BookingActivity"
@@ -32,10 +32,10 @@
             android:name=".MenuListActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".shared.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".shared.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

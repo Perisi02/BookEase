@@ -1,4 +1,4 @@
-package com.example.bookease;
+package com.example.bookease.admin;
 
 public class Admin_Booking_Model {
     private String bookingID;

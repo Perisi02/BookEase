@@ -1,4 +1,4 @@
-package com.example.bookease;
+package com.example.bookease.shared;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.bookease.MainActivity;
+import com.example.bookease.R;
+import com.example.bookease.admin.Admin_Dashboard;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

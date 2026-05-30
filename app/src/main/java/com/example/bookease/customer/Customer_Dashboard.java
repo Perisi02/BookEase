@@ -1,4 +1,4 @@
-package com.example.bookease;
+package com.example.bookease.customer;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,14 +10,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class CustomerProfileActivity extends AppCompatActivity {
+import com.example.bookease.R;
+
+public class Customer_Dashboard extends AppCompatActivity {
 
     Button btn_editDetails;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_customer_profile);
+        setContentView(R.layout.customer_activity_dashboard);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

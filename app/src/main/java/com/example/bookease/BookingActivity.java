@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.bookease.customer.Customer_Dashboard;
 
 import java.util.Calendar;
 
@@ -40,7 +41,6 @@ public class BookingActivity extends AppCompatActivity {
 
     /**
      *
-     * @return
      */
     private String getCurrentDate() {
         Calendar calendar = Calendar.getInstance();
@@ -84,9 +84,6 @@ public class BookingActivity extends AppCompatActivity {
 
     /**
      *
-     * @param day
-     * @param month
-     * @param year
      */
     private String dateToString(int day, int month, int year) {
         return day + " " + getMonthFormat(month) + " " + year;
@@ -94,7 +91,6 @@ public class BookingActivity extends AppCompatActivity {
 
     /**
      *
-     * @param month
      */
     private String getMonthFormat(int month) {
         switch (month) {
@@ -128,7 +124,7 @@ public class BookingActivity extends AppCompatActivity {
      *      logged in -> open user profile/dashboard
      */
     public void openProfile(View view) {
-        Intent intent = new Intent(BookingActivity.this, CustomerProfileActivity.class);
+        Intent intent = new Intent(BookingActivity.this, Customer_Dashboard.class);
         startActivity(intent);
     }
 }

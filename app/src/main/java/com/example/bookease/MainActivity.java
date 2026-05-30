@@ -14,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.bookease.customer.Customer_Dashboard;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView iv_hamburgerMenu;
@@ -39,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *  Opens login or profile screen
-     *  If user is logged on -> open profile
-     *  else -> open login
+     *
+     *
+     *
      */
     public void openProfile(View view) {
         // IDK gotta logic to check if user is logged in
-        Intent intent = new Intent(MainActivity.this, CustomerProfileActivity.class);
+        Intent intent = new Intent(MainActivity.this, Customer_Dashboard.class);
         startActivity(intent);
     }
 
