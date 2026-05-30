@@ -1,10 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Admin_Bookings">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- heading -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Manage Bookings" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:onClick="logoutAdmin"
+            android:text="Logout" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:onClick="goBack"
+            android:text="Back" />
+    </FrameLayout>
+
+    <!-- body container -->
+    <LinearLayout
+        android:id="@+id/ll_systemOverview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- just a heading label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Showing all bookings" />
+
+        <!-- Decorative line break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <!-- Display all bookings -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bookings"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <!-- Management buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- manage booking -->
+        <Button
+            android:id="@+id/btn_manageBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startManageBooking"
+            android:text="Manage Bookings" />
+
+        <!-- manage menu items -->
+        <Button
+            android:id="@+id/btn_manageMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startManageMenu"
+            android:text="Manage Menu" />
+
+        <!-- manage staff -->
+        <Button
+            android:id="@+id/btn_manageStaff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startManageStaff"
+            android:text="Manage Staff" />
+    </LinearLayout>
+
+</LinearLayout>

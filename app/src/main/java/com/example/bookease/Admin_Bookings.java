@@ -1,6 +1,8 @@
 package com.example.bookease;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,11 @@ public class Admin_Bookings extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void goBack(View view) {
+        Intent intent = new Intent(Admin_Bookings.this, Admin_Dashboard.class);
+        startActivity(intent);
+        finish();
     }
 }
