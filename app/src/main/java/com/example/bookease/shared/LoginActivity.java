@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.bookease.MainActivity;
 import com.example.bookease.R;
+import com.example.bookease.Staff_Dashboard;
 import com.example.bookease.admin.Admin_Dashboard;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -97,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 finish();
                             } else if (type.equalsIgnoreCase("staff")) {
-                                Intent intent = new Intent(LoginActivity.this, Admin_Dashboard.class);
+                                Intent intent = new Intent(LoginActivity.this, Staff_Dashboard.class);
                                 startActivity(intent);
                                 finish();
                             } else if (type.equalsIgnoreCase("admin")) {
